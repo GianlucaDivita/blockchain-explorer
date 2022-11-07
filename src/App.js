@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import wallet from './Components/Wallet';
 
 function App() {
   return (
