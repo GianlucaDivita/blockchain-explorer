@@ -31,7 +31,7 @@ function Receipt({ receiver, amount }) {
           <b>To:</b> {receiver}
         </p>
         <p className="transaction-info">
-          <b>Gas:</b> {amount} <b>WEI</b>
+          <b>GAS:</b> 21000 <b>WEI</b>
         </p>
       </div>
     </>
