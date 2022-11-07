@@ -121,3 +121,17 @@ li {
   text-decoration: none;
   margin: 20px;
 }
+
+.text {
+
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: blue;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
