@@ -6,24 +6,44 @@
 The component will show a mock Transfer Receipt after the Submit action if clicked
 */
 
+import { useState } from "react";
+import "./style.css";
+import { useParams } from "react-router-dom";
+import Receipt from "./Receipt";
 
-import React from "react";
-import './style.css';
+export const Transfer = () => {
+  const { receiver } = useParams();
+  const [transactions, setTransactions] = useState([]);
+  const [amount, setAmount] = useState("");
 
-function Transfer() {
+  const transact = () => {
+    setTransactions((prev) => {
+      return [...prev, { receiver: receiver, amount: amount }];
+    });
+  };
 
-  return <>
+  const handleChange = (event) => {
+    setAmount(event.target.value);
+  };
 
-  <h3 class='wallet-title'>Transfer</h3>
- 
- <div class='transfer-box'>
-  <h3 class='address'>From: 0x4C9E4585Bd7623Db96Dd544D9A3f99aA05DB7876</h3>
-  <h3 class='address'>To: 0xa26BCAbf497FC3ad15D3F868dBa026E41604B5C0</h3>
-  <input class='submit'></input>
-  <button class='button'>Submit</button>
-  </div>
-  </>
+  return (
+    <>
+      <h3 className="wallet-title">Transfer</h3>
 
-}
-
-export default Transfer;
+      <div className="transfer-box">
+        <h3 className="address">
+          From: 0x4C9E4585Bd7623Db96Dd544D9A3f99aA05DB7876
+        </h3>
+        <h3 className="address">To: {receiver}</h3>
+        <input className="text" onChange={handleChange}></input>
+        <br />
+        <button className="submit" onClick={transact}>
+          Submit
+        </button>
+      </div>
+      {transactions.map((transaction, key) => {
+        return <Receipt {...transaction} key={key} />;
+      })}
+    </>
+  );
+};
