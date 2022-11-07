@@ -18,7 +18,7 @@
   border-radius: 10px;
   border-color: rgb(157, 12, 201);
   padding: 30px;
-  margin: 180px;
+  margin: 200px;
   min-width: 700px;
   position: relative;
   top: 100px;
@@ -89,4 +89,31 @@
   font-weight: 600;
   color: white;
   background-color: red;
+}
+
+.home {
+
+font-size: 24px;
+margin-top: 120px;
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+.link {
+  font-size: 20px;
+}
+
+.link :hover {
+  font-size: 20px;
+  text-decoration: none;
+  color: orange;
+}
+
+li {
+  display: inline;
+  text-decoration: none;
+  margin: 20px;
 }

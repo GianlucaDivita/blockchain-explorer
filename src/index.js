@@ -8,6 +8,7 @@ import Addresses from './Components/Addresses';
 import Transactions from './Components/Transactions';
 import Transfer from './Components/Transfer';
 import Reciept from './Components/Reciept';
+import Home from './Components/Home';
 
 import './Components/style.css';
 
@@ -15,7 +16,7 @@ import './Components/style.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <Reciept/>
+    <App/>
   </>
 );
 
