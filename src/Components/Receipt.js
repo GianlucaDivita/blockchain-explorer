@@ -10,7 +10,7 @@ import "./style.css";
 function Receipt({ receiver, amount }) {
   return (
     <>
-      <h3 className="wallet-title">Receipt</h3>
+      <h3 className="wallet-title-flex">Receipt</h3>
 
       <div className="wallet-box-extended">
         <h3 className="address">
