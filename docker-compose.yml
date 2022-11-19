@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  server:
+    image: server:latest
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+      - 9229:9229
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
+    command: 
+      - nodemon
+      - --legacy-watch
+      - --inspect=0.0.0.0:9229
+      - app.js
