@@ -1,5 +1,9 @@
 version: "3.9"
 services:
+  mongo:
+    image: mongo:4.2.8
+    ports:
+      - 27017:27017
   server:
     image: server:latest
     build:
@@ -18,3 +22,5 @@ services:
       - --legacy-watch
       - --inspect=0.0.0.0:9229
       - app.js
+    depends_on:
+      - mongo
