@@ -1,13 +1,13 @@
 import express, { request } from "express";
 import mongoose from "mongoose";
 import seedData from "./seedData.js";
-import cors from "cors"
+import cors from "cors";
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 const port = 3000;
-seedData()
+seedData();
 
 // mongoose.connect("mongodb://mongo:27017", { useNewUrlParser: true }).then(
 //   () => {
@@ -37,25 +37,24 @@ const balance = {
 };
 
 app.get("/addresses", (req, res) => {
-return res.send(200, {data}) 
-})
+  return res.send(200, data);
+});
 
 app.get("/balance", (req, res) => {
-console.log(req.body)
-return res.send(200, {balance}) 
-})
-
+  console.log(req.body);
+  return res.send(200, balance);
+});
 
 app.get("/", (req, res) => {
   console.log(`Server getting on ${port}`);
   return res.send(200, "Welcome to the blockchain explorer app. Have fun.");
-})
+});
 
 app.get("/transactionhistory", (req, res) => {
   seedData.find({}, (err, transaction) => {
     return res.send(200, transaction);
-  })
-})
+  });
+});
 
 app.listen(port, () => {
   console.log(`Server listening on ${port}`);

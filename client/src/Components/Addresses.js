@@ -10,20 +10,17 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
 
-
-
 function Addresses() {
   const navigate = useNavigate();
 
-const [data, setData] = useState([]);
-
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3001/addresses")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setData(data.data);
+        setData(data);
       });
   }, []);
 
