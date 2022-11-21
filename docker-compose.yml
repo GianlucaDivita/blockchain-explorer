@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  mongo:
+    container_name: mongo
+    image: mongo:4.2.8
+    ports:
+      - 27017:27017
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
+    command: 
+      - npm
+      - start
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3001:3000
+      - 9229:9229
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
+    command: 
+      - nodemon
+      - --legacy-watch
+      - --inspect=0.0.0.0:9229
+      - app.js
+    depends_on:
+      - mongo
