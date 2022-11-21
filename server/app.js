@@ -1,9 +1,11 @@
 import express, { request } from "express";
 import mongoose from "mongoose";
 import seedData from "./seedData.js";
+import cors from "cors"
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 const port = 3000;
 seedData()
 
@@ -17,7 +19,7 @@ seedData()
 // );
 
 const data = [
-  "0x4C9E4585Bd7623Db96Dd544D9A3f99aA05DB7876",
+  "0x5C9E4585Bd7623Db96Dd544D9A3f99aA05DB7876",
   "0xD37D5f5104d9ecc0BbF25208a699E36A3Ce5F7cD",
   "0xaFdF79649998bf681c1813a41ed6c9d820B8dFs92",
   "0xaDC2611a2F93694F8d3C3bd09900e44FD6D89A73",
@@ -29,13 +31,18 @@ const data = [
   "0xaD6F638D81FC17C61F38E724BdC4E424D1C14395",
 ];
 
+const balance = {
+  address: "0x5C9E4585Bd7623Db96Dd544D9A3f99aA05DB7876",
+  balance: 1000,
+};
+
 app.get("/addresses", (req, res) => {
 return res.send(200, {data}) 
 })
 
 app.get("/balance", (req, res) => {
 console.log(req.body)
-return res.send(200, req.body.address + ' Balance: 120482 ETH') 
+return res.send(200, {balance}) 
 })
 
 
