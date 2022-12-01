@@ -38,3 +38,8 @@ services:
       - app.js
     depends_on:
       - mongo
+  testChain:
+    container_name: blockChain 
+    image: trufflesuite/ganache-cli:latest
+    ports:
+      - 8545:8545
