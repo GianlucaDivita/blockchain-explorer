@@ -4,7 +4,7 @@
 */
 
 import React, { useState, useEffect } from "react";
-import "./style.css";
+import "./transactions.css";
 
 function Transactions() {
   const [data, setData] = useState([]);
@@ -27,7 +27,7 @@ function Transactions() {
           <div key={key}>
             <div className="wallet-box-extended">
               <h3 className="address">
-                Transaction Hash:{transaction.receiptHash}
+                 <p className="hash">Hash: {transaction.receiptHash}</p>
               </h3>
               <p className="transaction-info">
                 <b>Status:</b> {transaction.status ? "Success" : "Failed"}

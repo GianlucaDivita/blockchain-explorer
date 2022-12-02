@@ -4,7 +4,7 @@ This component will contain read only mock data and contain the wallet details
 */
 
 import React, { useState, useEffect } from "react";
-import "./style.css";
+import "./wallet.css";
 
 function Wallet() {
   const [data, setData] = useState({});

@@ -7,7 +7,7 @@ The component will show a mock Transfer Receipt after the Submit action if click
 */
 
 import { useState } from "react";
-import "./style.css";
+import "./transfer.css";
 import { useParams } from "react-router-dom";
 import Receipt from "./Receipt";
 

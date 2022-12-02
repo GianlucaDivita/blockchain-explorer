@@ -1,137 +1,144 @@
-.wallet-box {
-  border-style: solid;
-  border-width: 4px;
-  border-radius: 10px;
-  border-color: rgb(157, 12, 201);
-  padding: 30px;
-  margin: 200px;
-  min-width: 450px;
-  position: relative;
-  top: 100px;
-  background-color: rgb(221, 255, 31);
-}
+ /* 
+ 
+ This is for reference.
+ 
+ 
+ .wallet-box {
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: rgb(157, 12, 201);
+    padding: 30px;
+    margin: 200px;
+    min-width: 450px;
+    position: relative;
+    top: 100px;
+    background-color: rgb(221, 255, 31);
+  }
 
-.wallet-box-extended {
-  border-style: solid;
-  border-width: 4px;
-  border-radius: 10px;
-  border-color: rgb(157, 12, 201);
-  padding: 30px;
-  margin: 200px;
-  min-width: 700px;
-  position: relative;
-  top: 100px;
-  background-color: rgb(221, 255, 31);
-}
+  .wallet-box-extended {
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: rgb(157, 12, 201);
+    padding: 30px;
+    margin: 200px;
+    min-width: 700px;
+    position: relative;
+    top: 100px;
+    background-color: rgb(221, 255, 31);
+  }
 
-.transfer-box {
-  border-style: solid;
-  border-width: 4px;
-  border-radius: 10px;
-  border-color: rgb(157, 12, 201);
-  padding: 30px;
-  margin: 200px;
-  min-width: 450px;
-  height: 250px;
-  position: relative;
-  top: 100px;
-  background-color: rgb(221, 255, 31);
-}
+  .transfer-box {
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: rgb(157, 12, 201);
+    padding: 30px;
+    margin: 200px;
+    min-width: 450px;
+    height: 250px;
+    position: relative;
+    top: 100px;
+    background-color: rgb(221, 255, 31);
+  }
 
-.address {
-  color: rgb(209, 7, 7);
-  font-size: 1vm;
-}
+  .address {
+    color: rgb(209, 7, 7);
+    font-size: 1vm;
+  }
 
-.balance {
-  color: green;
-  font-size: 20px;
-}
+  .balance {
+    color: green;
+    font-size: 20px;
+  }
 
-.wallet-title {
-  position: absolute;
-  font-size: 42px;
-  top: 130px;
-  left: 180px;
-  color: darkblue;
-}
+  .wallet-title {
+    position: absolute;
+    font-size: 42px;
+    top: 130px;
+    left: 180px;
+    color: darkblue;
+  }
 
-.wallet-title-flex {
-  font-size: 42px;
-  top: 130px;
-  left: 180px;
-  color: darkblue;
-}
+  .wallet-title-flex {
+    font-size: 42px;
+    top: 130px;
+    left: 180px;
+    color: darkblue;
+  }
 
-.transaction-info {
-  color: green;
-  font-size: 20px;
-  font-style: italic;
-}
+  .transaction-info {
+    color: green;
+    font-size: 20px;
+    font-style: italic;
+  }
 
-.submit {
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 5px;
-  border-color: blue;
-  width: 200px;
-  height: 40px;
-  font-size: 20px;
-  position: relative;
-  top: 20px;
-}
+  .submit {
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: blue;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+  }
 
-.button {
-  position: absolute;
-  bottom: 20px;
-  left: 30px;
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 5px;
-  border-color: blue;
-  width: 100px;
-  height: 40px;
-  font-size: 16px;
-  font-weight: 600;
-  color: white;
-  background-color: red;
-}
+  .button {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: blue;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+  }
 
-.home {
-  font-size: 24px;
-  margin-top: 120px;
-}
+  .home {
+    font-size: 24px;
+    margin-top: 120px;
+  }
 
-ul {
-  list-style-type: none;
-}
+  ul {
+    list-style-type: none;
+  }
 
-.link {
-  font-size: 20px;
-}
+  .link {
+    font-size: 20px;
+  }
 
-.link :hover {
-  font-size: 20px;
-  text-decoration: none;
-  color: orange;
-}
+  .link :hover {
+    font-size: 20px;
+    text-decoration: none;
+    color: orange;
+  }
 
-li {
-  display: inline;
-  text-decoration: none;
-  margin: 20px;
-}
+  li {
+    display: inline;
+    text-decoration: none;
+    margin: 20px;
+  }
 
-.text {
+  .text {
 
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 5px;
-  border-color: blue;
-  width: 150px;
-  height: 40px;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-}
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: blue;
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+  }
+
+*/

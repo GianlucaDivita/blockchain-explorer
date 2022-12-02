@@ -5,16 +5,16 @@
 */
 
 import React from "react";
-import "./style.css";
+import "./receipt.css";
 
 function Receipt({ receiver, amount }) {
   return (
     <>
-      <h3 className="wallet-title-flex">Receipt</h3>
+      <h3 className="wallet-title">Receipt</h3>
 
       <div className="wallet-box-extended">
         <h3 className="address">
-          Transaction Hash:
+          Transaction Hash
           0xd9ae90073a2285d94ba419598e37b0b37206ba9ac54a09c45b5d3b6bab30a8fb
         </h3>
         <p className="transaction-info">
