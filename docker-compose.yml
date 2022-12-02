@@ -6,6 +6,7 @@ services:
     ports:
       - 27017:27017
   client:
+    container_name: client
     build:
       context: ./client
       dockerfile: Dockerfile
@@ -20,6 +21,7 @@ services:
       - npm
       - start
   server:
+    container_name: server
     build:
       context: ./server
       dockerfile: Dockerfile
@@ -38,7 +40,8 @@ services:
       - app.js
     depends_on:
       - mongo
-  testChain:
+      - blockChain
+  blockChain:
     container_name: blockChain 
     image: trufflesuite/ganache-cli:latest
     ports:
