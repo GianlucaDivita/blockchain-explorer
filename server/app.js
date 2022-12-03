@@ -3,11 +3,9 @@ import seedData from "./seedData.js";
 import cors from "cors";
 import Web3 from "web3";
 
-const web3 = new Web3("http://blockChain:8545");
+const web3 = new Web3("ws://blockChain:8545");
 
-const accounts = async () => {
-  return await web3.eth.getAccounts();
-};
+const accounts = await web3.eth.getAccounts();
 
 const app = express();
 app.use(express.json());
@@ -15,7 +13,7 @@ app.use(cors());
 const port = 3000;
 
 app.get("/addresses", async (req, res) => {
-  return res.send(await accounts());
+  return res.send(accounts);
 });
 
 app.get("/balance", async (req, res) => {
