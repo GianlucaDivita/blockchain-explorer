@@ -27,7 +27,7 @@ function Transactions() {
           <div key={key}>
             <div className="wallet-box-extended">
               <h3 className="address">
-                 <p className="hash">Hash: {transaction.receiptHash}</p>
+                <p className="hash">Hash: {transaction.transactionHash}</p>
               </h3>
               <p className="transaction-info">
                 <b>Status:</b> {transaction.status ? "Success" : "Failed"}
@@ -36,10 +36,10 @@ function Transactions() {
                 <b>Timestamp:</b> {transaction.createdAt}
               </p>
               <p className="transaction-info">
-                <b>From:</b> {transaction.source}
+                <b>From:</b> {transaction.from}
               </p>
               <p className="transaction-info">
-                <b>To:</b> {transaction.destination}
+                <b>To:</b> {transaction.to}
               </p>
               <p className="transaction-info">
                 <b>Value:</b> {transaction.amount} <b>ETH</b>
