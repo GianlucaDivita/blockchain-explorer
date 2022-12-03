@@ -30,7 +30,6 @@ export const Transfer = () => {
   const transact = () => {
     axios
       .post("http://localhost:3001/sendTransaction", {
-        getsd: "dfsd",
         source: account,
         destination: receiver,
         value: amount,
