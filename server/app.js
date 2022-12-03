@@ -16,10 +16,10 @@ app.get("/addresses", async (req, res) => {
   return res.send(accounts);
 });
 
-app.get("/balance", async (req, res) => {
+app.get("/balance/:address", async (req, res) => {
   return res.send({
-    address: req.body.address,
-    balance: await web3.eth.getBalance(req.body.address),
+    address: req.params.address,
+    balance: await web3.eth.getBalance(req.params.address),
   });
 });
 
