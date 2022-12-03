@@ -19,7 +19,7 @@ function Addresses() {
     fetch("http://localhost:3001/addresses")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        data.shift();
         setData(data);
       });
   }, []);
