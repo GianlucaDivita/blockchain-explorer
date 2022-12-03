@@ -13,7 +13,6 @@ function Transactions() {
     fetch("http://localhost:3001/transactionhistory")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setData(data);
       });
   }, []);
