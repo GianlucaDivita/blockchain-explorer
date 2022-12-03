@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/transactionHistory", (req, res) => {
-  seedData.find({ from: req.body.from?.toLowerCase() }, (err, transaction) => {
+  seedData.find({}, (err, transaction) => {
     return res.send(transaction);
   });
 });
