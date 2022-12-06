@@ -1,5 +1,5 @@
 import Web3 from "web3";
-const web3 = new Web3("ws://blockChain:8545");
+const web3 = new Web3("http://blockChain:8545");
 
 var accounts = [];
 const getAccounts = async () => {
