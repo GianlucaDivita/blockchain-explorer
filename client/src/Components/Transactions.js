@@ -4,7 +4,7 @@
 */
 
 import React, { useState, useEffect } from "react";
-import "./style.css";
+import "./transactions.css";
 
 function Transactions() {
   const [data, setData] = useState([]);
@@ -13,7 +13,6 @@ function Transactions() {
     fetch("http://localhost:3001/transactionhistory")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setData(data);
       });
   }, []);
@@ -24,10 +23,10 @@ function Transactions() {
 
       {data.map((transaction, key) => {
         return (
-          <div key={key}>
-            <div className="wallet-box-extended">
+          <div className="wallet-box-extended-th" key={key}>
+
               <h3 className="address">
-                Transaction Hash:{transaction.receiptHash}
+                <p className="hash">Hash: {transaction.transactionHash}</p>
               </h3>
               <p className="transaction-info">
                 <b>Status:</b> {transaction.status ? "Success" : "Failed"}
@@ -36,10 +35,10 @@ function Transactions() {
                 <b>Timestamp:</b> {transaction.createdAt}
               </p>
               <p className="transaction-info">
-                <b>From:</b> {transaction.source}
+                <b>From:</b> {transaction.from}
               </p>
               <p className="transaction-info">
-                <b>To:</b> {transaction.destination}
+                <b>To:</b> {transaction.to}
               </p>
               <p className="transaction-info">
                 <b>Value:</b> {transaction.amount} <b>ETH</b>
@@ -47,7 +46,7 @@ function Transactions() {
               <p className="transaction-info">
                 <b>Gas:</b> {transaction.gasUsed} <b>WEI</b>
               </p>
-            </div>
+           
           </div>
         );
       })}

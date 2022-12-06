@@ -5,33 +5,33 @@
 */
 
 import React from "react";
-import "./style.css";
+import "./receipt.css";
 
-function Receipt({ receiver, amount }) {
+function Receipt({ to, from, transactionHash, gasUsed, blockNumber, blockHash }) {
   return (
     <>
-      <h3 className="wallet-title-flex">Receipt</h3>
+      <h3 className="wallet-title">Receipt</h3>
 
       <div className="wallet-box-extended">
         <h3 className="address">
-          Transaction Hash:
-          0xd9ae90073a2285d94ba419598e37b0b37206ba9ac54a09c45b5d3b6bab30a8fb
+          <b>Transaction Hash:</b>{" "} 
+          {transactionHash}
         </h3>
         <p className="transaction-info">
           <b>Block Hash:</b>{" "}
-          a11a290ad6828f7c76e8798a6e1f6b3592083fb6f8ee298b510268bc47b674f6
+          {blockHash}
         </p>
         <p className="transaction-info">
-          <b>Block Number:</b> 12
+          <b>Block Number:</b> {blockNumber}
         </p>
         <p className="transaction-info">
-          <b>From:</b> 0x4C9E4585Bd7623Db96Dd544D9A3f99aA05DB7876
+          <b>From:</b> {from}
         </p>
         <p className="transaction-info">
-          <b>To:</b> {receiver}
+          <b>To:</b> {to}
         </p>
         <p className="transaction-info">
-          <b>GAS:</b> 21000 <b>WEI</b>
+          <b>GAS:</b> {gasUsed} <b>WEI</b>
         </p>
       </div>
     </>

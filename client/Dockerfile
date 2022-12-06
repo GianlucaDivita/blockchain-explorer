@@ -1,6 +1,7 @@
 FROM node:lts-alpine
 ENV NODE_ENV=development
 WORKDIR /usr/src/app
+RUN npm i -g nodemon
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm install

@@ -1,0 +1,31 @@
+
+
+  .list {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+  }
+
+
+  .list :hover {
+    text-decoration: none;
+    color: orange;
+  }
+
+  
+  li {
+    display: inline;
+    text-decoration: none;
+    margin: 20px;
+  }
+
+  li:active {
+    text-decoration: none;
+  }
+
+  .navlink {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }

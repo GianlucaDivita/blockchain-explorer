@@ -7,7 +7,7 @@ The target link will pass forward the Node address to the Transfer view.
 */
 
 import React, { useEffect, useState } from "react";
-import "./style.css";
+import "./addresses.css";
 import { useNavigate } from "react-router-dom";
 
 function Addresses() {
@@ -19,26 +19,25 @@ function Addresses() {
     fetch("http://localhost:3001/addresses")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        data.shift();
         setData(data);
       });
   }, []);
 
   return (
     <>
-      <h3 className="wallet-title">Blockchain Node Addresses</h3>
+      <h3 className="title">Blockchain Node Addresses</h3>
 
-      <div className="wallet-box">
+      <div className="box">
         {data.map((receiver) => {
           return (
             <>
-              <h3
-                className="address"
+              <h3 className="address-link"
                 onClick={() => {
                   navigate(`/Transfer/${receiver}`);
                 }}
               >
-                {receiver}
+               <p> {receiver} </p>
               </h3>
 
               <br />

@@ -1,0 +1,77 @@
+
+
+.wallet-title {
+    margin: 60px;
+    color: white;
+
+  }
+
+  .transfer-box {
+    background-color:rgb(37, 37, 48);
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px ;
+    box-shadow: 2px 4px 5px rgb(0, 0, 0);
+  }
+
+
+  .submit {
+    border-style: solid;
+    border-width: 1px ;
+    box-shadow: 2px 4px 5px rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    margin: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+  }
+
+ .submit:hover {
+
+    background-color: rgb(33, 124, 15);
+    transform: translateY(-4px);
+    transition: 0.2s;
+ }
+
+  .button {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: red;
+  }
+
+  .address {
+    color: rgb(255, 255, 255);
+    font-size: 1vm;
+  }
+
+  .text {
+
+    border-style: solid;
+    border-width: 1px ;
+    box-shadow: 2px 4px 5px rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    margin: 30px;
+  }

@@ -1,25 +1,17 @@
 version: "3.9"
 services:
+  blockChain:
+    container_name: blockChain 
+    image: trufflesuite/ganache-cli:latest
+    ports:
+      - 8545:8545
   mongo:
     container_name: mongo
     image: mongo:4.2.8
     ports:
       - 27017:27017
-  client:
-    build:
-      context: ./client
-      dockerfile: Dockerfile
-    environment:
-      NODE_ENV: development
-    ports:
-      - 3000:3000
-    volumes:
-      - ./client:/usr/src/app
-      - /usr/src/app/node_modules
-    command: 
-      - npm
-      - start
   server:
+    container_name: server
     build:
       context: ./server
       dockerfile: Dockerfile
@@ -38,3 +30,21 @@ services:
       - app.js
     depends_on:
       - mongo
+      - blockChain
+  client:
+    container_name: client
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
+    command: 
+      - npm
+      - start
+    depends_on:
+      - server
