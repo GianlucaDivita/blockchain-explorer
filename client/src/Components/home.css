@@ -1,7 +1,23 @@
+
 .home {
     font-size: 24px;
     margin-top: 160px;
     color: white;
     font-weight: 600;
+}
+
+a {
+
+    font-size: 24px;
+    margin-top: 160px;
+    color: white;
+    font-weight: 600;
+}
+
+a:hover {
+
+    transition: all .5s ease-in-out;
+    color: rgb(202, 25, 25);
 
 }
+

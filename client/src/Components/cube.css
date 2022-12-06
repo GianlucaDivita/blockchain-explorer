@@ -1,0 +1,134 @@
+
+
+
+.cube-body  {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+
+
+  }
+
+.zero {
+
+    --i:0;
+
+}
+
+.one {
+
+    --i:1
+}
+
+.two {
+
+    --i:2
+}
+
+.three {
+
+    --i:3
+}
+
+
+
+
+
+.cube-1 {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    transform-style: preserve-3d;
+
+    margin: auto;
+    margin-top: 200px;
+    
+
+    animation: animate 18s linear infinite;
+  }
+  
+  .cube-1:hover {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg);
+    animation: animate 4s linear infinite;
+
+  }
+  
+  @keyframes animate 
+  
+  {
+    0% 
+    {
+    transform: rotateX(-30deg) rotateY(0deg);
+    }
+  
+    100% 
+    {
+    transform: rotateX(-30deg) rotateY(360deg);
+    }
+  
+  
+  }
+  
+  .cube-1 div {
+  
+    position: absolute;
+    top: 0;
+    left: 100;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+  
+  .cube-1 div span {
+  
+    position: absolute;
+    top: 0px;
+    left: 100;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(black, red); */
+    border-style: solid;
+    border-width: 6px;
+    border-color: rgb(255, 0, 0);
+    filter: blur(3px);
+    transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+  }
+
+  
+  .top-1 {
+    position: absolute;
+    top: 0;
+    left: 100;
+    width: 280px;
+    height: 280px;
+    transform: rotateX(90deg) translateZ(150px);
+   /* background: linear-gradient(black, red); */
+    border-style: solid;
+    border-width: 6px;
+    border-color: transparent
+    
+  }
+  
+  .top-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 280px;
+    background: red;
+    transform: translateZ(-400px);
+    filter:blur(50px) brightness(60%);
+    box-shadow: 0 0 120px rgba(0,255,0,0.2),
+    0 0 200px rgba(0,255,0,0.4),
+    0 0 300px rgba(0,255,0,0.6),
+    0 0 4000px rgba(0,255,0,0.8),
+    0 0 5000px rgba(0,255,0,0.1);
+  }
