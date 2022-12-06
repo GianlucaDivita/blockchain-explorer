@@ -23,8 +23,8 @@ function Transactions() {
 
       {data.map((transaction, key) => {
         return (
-          <div key={key}>
-            <div className="wallet-box-extended">
+          <div className="wallet-box-extended-th" key={key}>
+
               <h3 className="address">
                 <p className="hash">Hash: {transaction.transactionHash}</p>
               </h3>
@@ -46,7 +46,7 @@ function Transactions() {
               <p className="transaction-info">
                 <b>Gas:</b> {transaction.gasUsed} <b>WEI</b>
               </p>
-            </div>
+           
           </div>
         );
       })}
