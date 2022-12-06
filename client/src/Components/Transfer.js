@@ -22,7 +22,6 @@ export const Transfer = () => {
     fetch("http://localhost:3001/addresses")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data[0]);
         setAccount(data[0]);
       });
   }, []);
@@ -34,13 +33,14 @@ export const Transfer = () => {
         destination: receiver,
         value: amount,
       })
-      .then((response) => console.log(response.data))
+      .then((response) => {
+        setTransactions((prev) => {
+          return [...prev, response.data];
+        });
+  })
       .catch(function (error) {
         console.log(error);
       });
-    setTransactions((prev) => {
-      return [...prev, { receiver: receiver, amount: amount }];
-    });
   };
 
   const handleChange = (event) => {
